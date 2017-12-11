@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <title>Shotgun</title>
+
+        <link href="Shotgun.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="Shotgun.js" defer> </script> 
+        <script type="text/javascript" src="Player.js" defer> </script> 
+        <script type="text/javascript" src="Buttons.js" defer> </script> 
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    
+    <body>
+        <div class="jumbotron text-center" id="jumbo">    
+            <h1>Shotgun</h1> 
+            <p>I spelet Shotgun har du fyra alternativ att välja på "Ladda", "Blocka", "Skjuta" eller "Shotgun".<br> 
+                Spelet liknar sten, sax och påse i sin spelform.<br></p>   
+            <a id="ready-to-play" class="btn btn-info" role="button">Spela!</a>
+        </div>
+
+        <div class="container">
+            <div class="row" id="faq">
+                <div class="col-sm-12 text-center">
+                    <a id="infoBtn" class="btn btn-info" role="button">Regler</a>                        
+                    <p id="info">
+                        Datorn väljer sitt drag slumpmässigt. <br>
+                        Shotgun påminner en del om "sten, sax och påse", <br>
+                        men låter spelaren välja mellan att "Skjuta", "Ladda" och "Blocka".<br><br>
+                        För att vinna en spelomgång gäller det att “skjuta” samtidigt som motspelaren “laddar”.<br> 
+                        Varje spelare börjar utan skott, och för att få fler skott måste du “Ladda”. <br>
+                        Varje gång du laddar får du ett nytt skott. <br><br>
+                        Skjuta mot Skjuta resulterar i att båda spelarna förlorar ett skott, men ingen vinner.<br> 
+                        Då en spelare samlat på sig tre skott kan denne använda sig av “Shotgun”,<br> 
+                        vilket vinner även om motspelaren “blockar” eller “skjuter”.<br><br>
+
+                        <i>Nedan listas alla tänkbara scenarion: </i><br><br>
+                        
+                        <b>Ladda mot ladda:</b>  Båda spelarna får ett skott<br>
+                        <b>Ladda mot blocka:</b>  Spelaren som laddar får ett skott<br> 
+                        <b>Blocka mot blocka:</b> Ingenting händer<br> 
+                        <b>Skjuta mot blocka:</b>  Spelaren som skjuter förlorar ett skott<br> 
+                        <b>Skjuta mot skjuta:</b> Båda spelarna förlorar ett skott<br> 
+                        <b>Skjuta mot ladda:</b> Spelaren som skjuter vinner spelet<br> 
+                    </p>            
+                </div>
+            </div>
+            <div class="row text-center" id="choices">
+                <div class="col-sm-3">
+                    <a id="loadBtn" class="btn btn-primary active btn-lg" role="button">Ladda</a>                    
+                </div>
+                <div class="col-sm-3">
+                    <a id="blockBtn" class="btn btn-primary active btn-lg" role="button">Blocka</a>                                        
+                </div>
+                <div class="col-sm-3">
+                    <a id="shootBtn" class="btn btn-primary disabled btn-lg" role="button">Skjut</a>                                        
+                </div>
+                <div class="col-sm-3">
+                    <a id="shotgunBtn" class="btn btn-primary disabled btn-lg" role="button">Shotgun</a>                                        
+                </div>
+            </div>
+
+            <div class="row" id="game">
+                <div class="col-sm-12">
+                    <div class="row text-center">
+                        <div class="col-sm-4" >
+                            <h1>Du</h1>
+                            <h2>Skott: <span id="userShots">0</span></h2>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1>Omgång: <span id="round">0</span></h1>
+                            <h2><span id="userRound"></span> vs <span id="computerRound"></span></h2>
+                            <h3><span id="result"></span></h3>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1>Dator</h1>
+                            <h2>Skott: <span id="computerShots">0</span></h2>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-12">
+                    <a id="playAgainBtn" onclick="playAgainFunction(user)" class="btn btn-lg" 
+                    role="button">Spela igen?</a>                                                            
+                </div>
+            </div>
+        </div>  
+        <footer>
+            <div>
+                <p class="small">made by Markus Flodmark<br></p>     
+            </div>
+        </footer>
+    </body>
+</html>

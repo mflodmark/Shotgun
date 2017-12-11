@@ -1,0 +1,47 @@
+.container{
+    padding-bottom: 40px;   
+}
+
+footer {
+    text-align: center;
+    background-color: orange;
+    padding: 10px;
+}
+
+
+p.small {
+    line-height: 0.8;
+}
+
+.blur {
+    opacity: 0.5;
+    color: red;
+}
+
+#game {
+    margin: 10px;
+    border: 5px solid cyan;
+    height: 200px;
+    background-color: lightblue;
+}
+
+.btn-border-orange {
+    border: 2px solid orange;
+}
+
+#info {
+    border: solid 1px lightseagreen;
+}
+
+#infoBtn {
+    margin-bottom: 20px;
+}
+
+.img-shotgun {
+    height: 150px;
+    width: 80px;
+}
+
+#choices {
+    min-height:50px !important;
+}
